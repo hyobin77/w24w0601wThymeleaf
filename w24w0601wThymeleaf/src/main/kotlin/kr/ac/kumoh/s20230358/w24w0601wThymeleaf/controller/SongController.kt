@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping
 class SongController(val service: SongService) {
     @GetMapping("/song/random")
     fun  getRandomSong(model: Model): String{
-        model.addAttribute("song",service.getRandomSong())
+        //model.addAttribute("song",service.getRandomSong()) //주석처리시 500번 에러발생
         return "random"
     }
 
